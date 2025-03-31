@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BeforeGames - L'Animation Parfaite pour Vos Soirées</title>
+    <meta name="description" content="BeforeGames est votre compagnon idéal pour transformer chaque rencontre entre amis en moments mémorables avec des jeux interactifs.">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+</head>
+<body class="font-sans">
+    <!-- Navigation -->
+    <header class="sticky top-0 z-50 shadow-md">
+        <nav class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <div class="logo-container">
+                <div class="logo font-bold text-2xl">BeforeGames</div>
+                <span class="text-xs text-secondary tracking-wider">L'Animation Parfaite</span>
+            </div>
+            <div class="hidden md:flex space-x-8">
+                <a href="#accueil" class="nav-link">Accueil</a>
+                <a href="#jeux" class="nav-link">Nos Jeux</a>
+                <a href="#experience" class="nav-link">Expérience</a>
+                <a href="#telecharger" class="nav-link">Télécharger</a>
+            </div>
+            <div class="md:hidden">
+                <button id="menu-toggle" class="text-white focus:outline-none">
+                    <i class="fas fa-bars text-2xl"></i>
+                </button>
+            </div>
+        </nav>
+        <div id="mobile-menu" class="hidden md:hidden">
+            <div class="flex flex-col space-y-4 px-4 py-4 bg-white/10 backdrop-blur-md shadow-md">
+                <a href="#accueil" class="nav-link">Accueil</a>
+                <a href="#jeux" class="nav-link">Nos Jeux</a>
+                <a href="#experience" class="nav-link">Expérience</a>
+                <a href="#telecharger" class="nav-link">Télécharger</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Section Héro -->
+    <section id="accueil" class="hero-section min-h-screen flex items-center py-20">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 mb-10 md:mb-0">
+                    <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-white animate-fade-in">BeforeGames</h1>
+                    <h2 class="text-2xl md:text-3xl font-semibold mb-4 text-secondary animate-fade-in-delay-1">L'Animation Parfaite pour Vos Soirées</h2>
+                    <p class="text-lg mb-8 text-gray-200 max-w-xl animate-fade-in-delay-2">
+                        Transformez chaque rencontre entre amis en moments mémorables. Conçue pour briser la glace, stimuler les conversations et créer une ambiance conviviale.
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4 animate-fade-in-delay-3">
+                        <a href="#telecharger" class="btn-white flex items-center justify-center gap-2">
+                            <i class="fab fa-apple text-xl"></i>
+                            Télécharger sur iOS
+                        </a>
+                        <a href="#jeux" class="btn-secondary flex items-center justify-center gap-2">
+                            Découvrir les jeux
+                            <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="md:w-1/2 flex justify-center">
+                    <div class="phone-mockup animate-float">
+                        <img src="img/mockups/iPhone 13 Pro Midnight Color.png" alt="BeforeGames App" class="max-w-xs md:max-w-sm mx-auto">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Jeux -->
+    <section id="jeux" class="py-20">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-4 text-white">Découvrez Notre Collection de Jeux</h2>
+            <p class="text-center text-gray-200 max-w-3xl mx-auto mb-16">Une sélection soigneusement élaborée de jeux interactifs adaptés à tous types de rassemblements.</p>
+            
+            <div class="flex flex-col-reverse md:flex-row items-center mb-16">
+                <div class="md:w-1/2 mt-10 md:mt-0">
+                    <div class="phone-mockup-feature animate-float">
+                        <img src="img/mockups/iPhone 13 Pro Midnight Color (3).png" alt="BeforeGames Jeux" class="max-w-xs mx-auto">
+                    </div>
+                </div>
+                <div class="md:w-1/2">
+                    <h3 class="text-2xl font-bold mb-4 text-white text-center md:text-left">Des Jeux pour Tous les Moments</h3>
+                    <p class="text-gray-200 mb-6 text-center md:text-left">
+                        Notre collection de jeux a été conçue pour s'adapter à toutes les ambiances et situations - des soirées animées aux moments plus calmes. Chaque jeu apporte sa propre dynamique et transforme instantanément l'atmosphère de vos rencontres.
+                    </p>
+                    <div class="flex justify-center md:justify-start">
+                        <a href="#telecharger" class="btn-secondary inline-flex items-center gap-2">
+                            Commencer à jouer
+                            <i class="fas fa-gamepad"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+                <!-- Hot Ones -->
+                <div class="game-card" data-aos="fade-up">
+                    <div class="game-icon bg-gradient-primary text-white">
+                        <i class="fas fa-fire"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-3">Hot Ones</h3>
+                    <p class="mb-4">
+                        Inspiré du célèbre concept d'émission, ce jeu propose des questions pimentées qui révéleront les secrets les mieux gardés de vos amis ! Répondez à des questions de plus en plus audacieuses, testez vos limites et découvrez des anecdotes surprenantes sur votre entourage.
+                    </p>
+                    <p class="italic">
+                        Idéal pour les groupes qui se connaissent déjà et souhaitent approfondir leurs liens dans une ambiance décontractée et amusante.
+                    </p>
+                </div>
+                
+                <!-- Cold Ones -->
+                <div class="game-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="game-icon bg-gradient-secondary text-white">
+                        <i class="fas fa-snowflake"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-3">Cold Ones</h3>
+                    <p class="mb-4">
+                        Rafraîchissez l'atmosphère avec nos défis ludiques et accessibles ! Ce jeu propose une variété d'épreuves légères et divertissantes, parfaites pour tous les âges et toutes les personnalités. Des mini-jeux d'adresse aux défis créatifs, Cold Ones garantit des fous rires et des moments de complicité.
+                    </p>
+                    <p class="italic">
+                        La solution idéale pour animer une soirée avec des personnes qui ne se connaissent pas encore très bien.
+                    </p>
+                </div>
+                
+                <!-- Palmier -->
+                <div class="game-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="game-icon bg-gradient-success text-white">
+                        <i class="fas fa-leaf"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-3">Palmier</h3>
+                    <p class="mb-4">
+                        Redécouvrez ce classique des jeux de cartes avec notre version modernisée et dynamique ! Notre interprétation numérique conserve l'esprit du jeu original tout en y ajoutant des règles innovantes et des variations surprenantes.
+                    </p>
+                    <p class="italic">
+                        Accessible aux novices comme aux experts, Palmier s'adapte à la taille de votre groupe et à l'ambiance de votre soirée. Un incontournable qui traverse les générations et réunit tout le monde autour d'un moment de partage.
+                    </p>
+                </div>
+                
+                <!-- Qui est le plus -->
+                <div class="game-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="game-icon bg-gradient-warning text-white">
+                        <i class="fas fa-user-friends"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-3">Qui est le plus</h3>
+                    <p class="mb-4">
+                        Qui est le plus susceptible de se perdre en voyage ? De devenir célèbre ? De survivre à une apocalypse zombie ? Ce jeu révélateur met en lumière les personnalités de chacun à travers des questions amusantes et parfois surprenantes.
+                    </p>
+                    <p class="italic">
+                        Un excellent moyen de générer des discussions animées et de mieux comprendre les dynamiques de votre groupe !
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Expérience Utilisateur -->
+    <section id="experience" class="py-20">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-4">Une Expérience Utilisateur Exceptionnelle</h2>
+            <p class="text-center text-gray-200 max-w-3xl mx-auto mb-16">BeforeGames se distingue par son interface élégante aux couleurs vibrantes et son design intuitif.</p>
+            
+            <div class="flex flex-col md:flex-row items-center gap-12">
+                <div class="md:w-1/2">
+                    <div class="phone-mockup-feature animate-float-slow">
+                        <img src="img/mockups/iPhone 13 Pro Midnight Color (1).png" alt="BeforeGames Interface" class="max-w-xs mx-auto">
+                    </div>
+                </div>
+                <div class="md:w-1/2">
+                    <div class="feature-list">
+                        <div class="feature-item" data-aos="fade-left">
+                            <div class="feature-icon bg-gradient-primary text-white">
+                                <i class="fas fa-magic"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-bold mb-2">Design Vibrant</h3>
+                                <p>Interface élégante aux couleurs vibrantes et animations subtiles pour une expérience immersive.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="feature-item" data-aos="fade-left" data-aos-delay="100">
+                            <div class="feature-icon bg-gradient-secondary text-white">
+                                <i class="fas fa-bolt"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-bold mb-2">Navigation Fluide</h3>
+                                <p>Passez d'une activité à l'autre sans interruption pour maintenir l'ambiance de votre soirée.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="feature-item" data-aos="fade-left" data-aos-delay="200">
+                            <div class="feature-icon bg-gradient-success text-white">
+                                <i class="fas fa-mobile-alt"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-bold mb-2">Compatibilité Parfaite</h3>
+                                <p>L'application s'adapte parfaitement à tous les appareils iOS pour une expérience optimale.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="feature-item" data-aos="fade-left" data-aos-delay="300">
+                            <div class="feature-icon bg-gradient-warning text-white">
+                                <i class="fas fa-users"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-bold mb-2">Pour Toutes les Occasions</h3>
+                                <p>Soirées entre amis, réunions familiales, apéritifs entre collègues ou sessions de team building.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Télécharger -->
+    <section id="telecharger" class="py-20 text-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">Prêt à Transformer Vos Soirées ?</h2>
+                <p class="text-lg max-w-3xl mx-auto text-white/90">BeforeGames transforme chaque rassemblement ordinaire en une expérience extraordinaire, riche en rires, en découvertes et en moments de partage.</p>
+            </div>
+            
+            <div class="flex flex-col md:flex-row items-center justify-center gap-8">
+                <div class="md:w-1/2 order-2 md:order-1 flex justify-center">
+                    <div class="phone-mockup animate-float">
+                        <img src="img/mockups/iPhone 13 Pro Midnight Color (2).png" alt="BeforeGames Download" class="max-w-xs mx-auto">
+                    </div>
+                </div>
+                <div class="md:w-1/2 order-1 md:order-2 mb-8 md:mb-0">
+                    <div class="bg-white/10 backdrop-filter backdrop-blur-md rounded-xl p-8 shadow-lg max-w-md mx-auto">
+                        <h3 class="text-2xl font-bold mb-4 text-center md:text-left">Télécharger Maintenant</h3>
+                        <p class="mb-6 text-center md:text-left">Lancez l'application et commencez à jouer immédiatement, sans préparation nécessaire !</p>
+                        <div class="flex flex-col sm:flex-row justify-center md:justify-start gap-4">
+                            <a href="#" class="btn-white flex items-center justify-center gap-2">
+                                <i class="fab fa-apple text-xl"></i>
+                                Télécharger sur iOS
+                            </a>
+                            <a href="#" class="btn-outline-white flex items-center justify-center gap-2">
+                                En savoir plus
+                                <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <p class="text-white/80 italic mt-10 text-center">BeforeGames : Parce que les meilleurs moments commencent avant même que la fête ne démarre.</p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div>
+                    <h3 class="text-xl font-bold mb-4 text-white">BeforeGames</h3>
+                    <p class="text-gray-300 mb-4">L'Animation Parfaite pour Vos Soirées</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-white hover:text-secondary transition-colors">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="text-white hover:text-secondary transition-colors">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="text-white hover:text-secondary transition-colors">
+                            <i class="fab fa-facebook"></i>
+                        </a>
+                        <a href="#" class="text-white hover:text-secondary transition-colors">
+                            <i class="fab fa-tiktok"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h3 class="text-xl font-bold mb-4 text-white">Liens Rapides</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#accueil" class="text-gray-300 hover:text-white transition-colors">Accueil</a></li>
+                        <li><a href="#jeux" class="text-gray-300 hover:text-white transition-colors">Nos Jeux</a></li>
+                        <li><a href="#experience" class="text-gray-300 hover:text-white transition-colors">Expérience</a></li>
+                        <li><a href="#telecharger" class="text-gray-300 hover:text-white transition-colors">Télécharger</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-xl font-bold mb-4 text-white">Contact</h3>
+                    <p class="text-gray-300 mb-2">Une question ? Contactez-nous !</p>
+                    <a href="mailto:contact@beforegames.app" class="text-secondary hover:underline">contact@beforegames.app</a>
+                    <ul class="mt-4 space-y-2">
+                        <li><a href="conditions.html" class="text-gray-300 hover:text-white transition-colors">Conditions d'utilisation</a></li>
+                        <li><a href="confidentialite.html" class="text-gray-300 hover:text-white transition-colors">Politique de confidentialité</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-700 mt-10 pt-6 text-center text-gray-400">
+                <p>&copy; 2024 BeforeGames. Tous droits réservés.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

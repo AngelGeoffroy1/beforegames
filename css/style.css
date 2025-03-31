@@ -1,0 +1,526 @@
+/* Variables de couleurs */
+:root {
+    --primary: #241956;
+    --secondary: #ed4469;
+    --primary-light: #342978;
+    --secondary-light: #ff5e7f;
+    --gray-100: #f3f4f6;
+    --gray-200: #e5e7eb;
+    --gray-300: #d1d5db;
+    --gray-400: #9ca3af;
+    --gray-500: #6b7280;
+    --gray-600: #4b5563;
+    --gray-700: #374151;
+    --gray-800: #1f2937;
+    --gray-900: #111827;
+}
+
+/* Base */
+body {
+    font-family: 'Poppins', sans-serif;
+    color: var(--gray-100);
+    background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+    background-attachment: fixed;
+    min-height: 100vh;
+}
+
+/* Couleurs personnalisées */
+.text-primary { color: var(--primary); }
+.text-secondary { color: var(--secondary); }
+.bg-primary { background-color: var(--primary); }
+.bg-secondary { background-color: var(--secondary); }
+
+/* Gradients */
+.bg-gradient-primary {
+    background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
+}
+
+.bg-gradient-secondary {
+    background: linear-gradient(135deg, var(--secondary) 0%, var(--secondary-light) 100%);
+}
+
+.bg-gradient-success {
+    background: linear-gradient(135deg, #10b981 0%, #34d399 100%);
+}
+
+.bg-gradient-warning {
+    background: linear-gradient(135deg, #f59e0b 0%, #fbbf24 100%);
+}
+
+/* Hero Section */
+.hero-section {
+    position: relative;
+    overflow: hidden;
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(8px);
+    border-radius: 1.5rem;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.hero-section::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle at center, rgba(237, 68, 105, 0.15) 0%, rgba(36, 25, 86, 0.05) 50%, transparent 70%);
+    z-index: -1;
+    animation: pulse 15s ease-in-out infinite;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+        opacity: 0.5;
+    }
+    50% {
+        transform: scale(1.05);
+        opacity: 0.7;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 0.5;
+    }
+}
+
+/* Boutons */
+.btn-primary {
+    background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.5rem;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.btn-secondary {
+    background: linear-gradient(135deg, var(--secondary) 0%, var(--secondary-light) 100%);
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.5rem;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.btn-secondary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.btn-white {
+    background: white;
+    color: var(--primary);
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.5rem;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.btn-white:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.btn-outline-white {
+    background: transparent;
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.5rem;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    border: 2px solid white;
+    text-align: center;
+}
+
+.btn-outline-white:hover {
+    background: rgba(255, 255, 255, 0.1);
+    transform: translateY(-2px);
+}
+
+/* Navigation */
+.nav-link {
+    color: var(--gray-100);
+    font-weight: 500;
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+    color: white;
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: linear-gradient(to right, var(--secondary), white);
+    transition: width 0.3s ease;
+}
+
+.nav-link:hover::after {
+    width: 100%;
+}
+
+/* Cartes de jeux */
+.game-card {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(5px);
+    border-radius: 1rem;
+    padding: 2rem;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    color: var(--gray-100);
+    position: relative;
+    overflow: hidden;
+}
+
+.game-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, var(--primary), var(--secondary));
+    opacity: 0.1;
+    transition: opacity 0.3s ease;
+}
+
+.game-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+    background: rgba(255, 255, 255, 0.15);
+}
+
+.game-card:hover::before {
+    opacity: 0.2;
+}
+
+.game-card h3 {
+    color: white;
+}
+
+.game-card p {
+    color: var(--gray-200);
+}
+
+.game-card .italic {
+    color: var(--gray-300);
+}
+
+.game-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 3rem;
+    height: 3rem;
+    border-radius: 0.75rem;
+    margin-bottom: 1.25rem;
+    font-size: 1.25rem;
+}
+
+/* Liste de fonctionnalités */
+.feature-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.feature-item {
+    display: flex;
+    gap: 1rem;
+    align-items: flex-start;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 1.25rem;
+    border-radius: 0.75rem;
+    backdrop-filter: blur(5px);
+}
+
+.feature-item h3 {
+    color: white;
+}
+
+.feature-item p {
+    color: var(--gray-200);
+}
+
+.feature-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 0.5rem;
+    font-size: 1rem;
+    flex-shrink: 0;
+}
+
+/* Animation de la maquette de téléphone */
+.phone-mockup {
+    position: relative;
+    z-index: 1;
+    transition: all 0.3s ease;
+    filter: drop-shadow(0 20px 30px rgba(0, 0, 0, 0.3));
+    transform-origin: center bottom;
+}
+
+.phone-mockup img {
+    max-height: 600px;
+    width: auto;
+    object-fit: contain;
+}
+
+.phone-mockup:hover {
+    transform: scale(1.03);
+}
+
+.phone-mockup::before {
+    content: '';
+    position: absolute;
+    width: 80%;
+    height: 30%;
+    background: radial-gradient(ellipse at center, rgba(255, 255, 255, 0.3) 0%, rgba(255, 255, 255, 0.1) 70%, rgba(255, 255, 255, 0) 100%);
+    border-radius: 50%;
+    bottom: -10%;
+    left: 10%;
+    z-index: -1;
+    filter: blur(10px);
+}
+
+.phone-mockup-feature {
+    position: relative;
+    z-index: 1;
+    filter: drop-shadow(0 20px 30px rgba(0, 0, 0, 0.3));
+}
+
+.phone-mockup-feature img {
+    max-height: 500px;
+    width: auto;
+    object-fit: contain;
+}
+
+/* Animations */
+@keyframes float {
+    0% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-15px);
+    }
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+@keyframes float-slow {
+    0% {
+        transform: translateY(0px) rotate(-2deg);
+    }
+    50% {
+        transform: translateY(-10px) rotate(2deg);
+    }
+    100% {
+        transform: translateY(0px) rotate(-2deg);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.animate-float {
+    animation: float 6s ease-in-out infinite;
+}
+
+.animate-float-slow {
+    animation: float-slow 8s ease-in-out infinite;
+}
+
+.animate-fade-in {
+    animation: fadeIn 0.6s ease forwards;
+    opacity: 0;
+}
+
+.animate-fade-in-delay-1 {
+    animation: fadeIn 0.6s ease forwards;
+    animation-delay: 0.2s;
+    opacity: 0;
+}
+
+.animate-fade-in-delay-2 {
+    animation: fadeIn 0.6s ease forwards;
+    animation-delay: 0.4s;
+    opacity: 0;
+}
+
+.animate-fade-in-delay-3 {
+    animation: fadeIn 0.6s ease forwards;
+    animation-delay: 0.6s;
+    opacity: 0;
+}
+
+/* Section télécharger */
+#telecharger {
+    position: relative;
+    overflow: hidden;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(5px);
+    border-radius: 1rem;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+/* Sections principales */
+#accueil, #jeux, #experience {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(5px);
+    border-radius: 1rem;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+}
+
+#jeux h2, #experience h2 {
+    color: white;
+}
+
+#jeux p, #experience p {
+    color: var(--gray-200);
+}
+
+/* Header */
+header {
+    background: rgba(36, 25, 86, 0.9) !important;
+    backdrop-filter: blur(10px) !important;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Logo styles */
+.logo-container {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.1;
+}
+
+header .logo {
+    color: white !important;
+    font-size: 1.8rem;
+    letter-spacing: 0.5px;
+    background: linear-gradient(135deg, #ffffff 0%, var(--secondary-light) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+header .nav-link {
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    padding: 0.5rem 0;
+}
+
+/* Footer */
+footer {
+    background: rgba(17, 24, 39, 0.9) !important;
+    backdrop-filter: blur(5px);
+    border-radius: 1rem 1rem 0 0;
+    margin-top: 2rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .hero-section {
+        text-align: center;
+    }
+    
+    .phone-mockup::before {
+        width: 60%;
+        height: 60%;
+        bottom: -5%;
+        left: 20%;
+    }
+    
+    .feature-item {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    
+    .feature-icon {
+        margin-bottom: 0.75rem;
+    }
+    
+    .logo-container {
+        text-align: center;
+    }
+}
+
+@media (max-width: 640px) {
+    h1 {
+        font-size: 2.5rem;
+    }
+    
+    h2 {
+        font-size: 1.75rem;
+    }
+    
+    .phone-mockup img, .phone-mockup-feature img {
+        max-height: 450px;
+    }
+    
+    .game-card {
+        padding: 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+    
+    .phone-mockup img, .phone-mockup-feature img {
+        max-height: 350px;
+    }
+    
+    .hero-section {
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+    }
+    
+    .py-20 {
+        padding-top: 3rem;
+        padding-bottom: 3rem;
+    }
+}
+
+/* Section télécharger mockup */
+#telecharger .phone-mockup {
+    margin-top: -50px; 
+    margin-bottom: 30px;
+}
